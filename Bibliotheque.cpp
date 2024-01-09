@@ -9,7 +9,7 @@ Bibliotheque::Bibliotheque() {
     code = "";
     capaciteMax = 100; // Valeur arbitraire pour la capacité maximale
     nombreLivres = 0;
-    tete=nullptr;
+    ListeLivres = new Noeud();
 }
 
 // Constructeur prenant les attributs spécifiques

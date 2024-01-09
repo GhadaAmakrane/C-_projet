@@ -14,7 +14,7 @@ class Bibliotheque {
         string code;
         int capaciteMax;  // Nombre maximale de livres dans la bibliothèque
         int nombreLivres; // Nombre de livre dans la bibliothèque
-        Noeud* tete;  // Pointeur vers le premier nœud de la liste des livres
+        Noeud ListeLivres;  // liste chainée des livres
 
     public:
         Bibliotheque(); //Constructeur par defaut
