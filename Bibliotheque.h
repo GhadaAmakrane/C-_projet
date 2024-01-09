@@ -5,6 +5,7 @@
 using namespace std;
 #include "Livre.h"
 #include "Noeud.h"
+#include "ListeLivres.h"
 class Livre;
 
 class Bibliotheque {
@@ -24,18 +25,18 @@ class Bibliotheque {
         string getNom();
         string getAdresse();
         string getCode();
-        Livre** getLivres();
+        ListeLivres getLivres();
 
         //setters
         void setNom(string);
         void setAdresse(string);
         void setCode(string);
-        void setLivres(Livre**);
+        void setLivres(ListeLivres);
 
         //Methodes
         void afficherLivres() ;
         void ajouterLivre(Livre*);
-        Livre** chercheLivreParCatg(string);
+        ListeLivres chercheLivreParCatg(string);
         void demanderLivreAutreBib(string , Bibliotheque&);
         void acheterLivre(Livre&);
         void supprimerLivre(string);
