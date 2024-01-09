@@ -9,7 +9,7 @@ Bibliotheque::Bibliotheque() {
     code = "";
     capaciteMax = 100; // Valeur arbitraire pour la capacité maximale
     nombreLivres = 0;
-    listeLivres = new Livre*[capaciteMax]; // Allocation du tableau de pointeurs de Livre
+    tete=nullptr;
 }
 
 // Constructeur prenant les attributs spécifiques
@@ -17,7 +17,7 @@ Bibliotheque::Bibliotheque(string nom, string adresse, string code)
     : nom(nom), adresse(adresse), code(code) {
     capaciteMax = 100; // Valeur arbitraire pour la capacité maximale
     nombreLivres = 0;
-    listeLivres = new Livre*[capaciteMax]; // Allocation du tableau de pointeurs de Livre
+    tete=nullptr;
 }
 
 // Getter pour le nom
@@ -68,7 +68,11 @@ void Bibliotheque::setLivres(Livre** nouveauxLivres) {
 
 void Bibliotheque::ajouterLivre(Livre* nouveauLivre) {
     if (nombreLivres < capaciteMax) {
-        listeLivres[nombreLivres] = nouveauLivre;
+        // Créez un nouveau nœud avec le livre
+        Noeud* nouveauNoeud = new Noeud(nouveauLivre);
+        // Insérez le nœud au début de la liste
+        nouveauNoeud->suivant = tete;
+        tete = nouveauNoeud
         nombreLivres++;
         cout << "Livre ajouté avec succès." << endl;
     } else {
