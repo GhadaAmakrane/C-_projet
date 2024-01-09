@@ -9,7 +9,7 @@ Bibliotheque::Bibliotheque() {
     code = "";
     capaciteMax = 100; // Valeur arbitraire pour la capacité maximale
     nombreLivres = 0;
-    ListeLivres =  new Noeud();
+    Livres =  new ListeLivres();
 }
 
 // Constructeur prenant les attributs spécifiques
@@ -17,7 +17,7 @@ Bibliotheque::Bibliotheque(string nom, string adresse, string code)
     : nom(nom), adresse(adresse), code(code) {
     capaciteMax = 100; // Valeur arbitraire pour la capacité maximale
     nombreLivres = 0;
-    tete=nullptr;
+    Livres = new ListeLivres();
 }
 
 // Getter pour le nom
@@ -36,7 +36,7 @@ string Bibliotheque::getCode() {
 }
 
 // Getter pour les livres (retourne un tableau de pointeurs de Livre)
-Livre** Bibliotheque::getLivres() {
+ListeLivres Bibliotheque::getLivres() {
     return listeLivres;
 }
 
