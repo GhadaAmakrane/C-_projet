@@ -68,7 +68,11 @@ void Bibliotheque::setLivres(Livre** nouveauxLivres) {
 
 void Bibliotheque::ajouterLivre(Livre* nouveauLivre) {
     if (nombreLivres < capaciteMax) {
-        listeLivres[nombreLivres] = nouveauLivre;
+        // Créez un nouveau nœud avec le livre
+        Noeud* nouveauNoeud = new Noeud(nouveauLivre);
+        // Insérez le nœud au début de la liste
+        nouveauNoeud->suivant = tete;
+        tete = nouveauNoeud
         nombreLivres++;
         cout << "Livre ajouté avec succès." << endl;
     } else {
