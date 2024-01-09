@@ -11,7 +11,7 @@ class BD:
         string dessinateur ;
     public:
         BD(string,string,string,string);
-        BD(Livre,string); //Recopie
+        BD(Livre*,string); //Recopie
 
         string getDessinateur(); //getter
         void setDessinateur(string); //setter
