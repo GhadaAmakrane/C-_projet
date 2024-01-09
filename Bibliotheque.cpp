@@ -66,10 +66,10 @@ void Bibliotheque::setLivres(Livre** nouveauxLivres) {
     }
 }
 
-void Bibliotheque::ajouterLivre(Livre* nouveauLivre) {
+void Bibliotheque::ajouterLivre(Livre nouveauLivre) {
     if (nombreLivres < capaciteMax) {
         // Créez un nouveau nœud avec le livre
-        Noeud* nouveauNoeud = new Noeud(nouveauLivre);
+        Noeud *nouveauNoeud = new Noeud(&nouveauLivre);
         // Insérez le nœud au début de la liste
         nouveauNoeud->suivant = tete;
         tete = nouveauNoeud
@@ -81,18 +81,28 @@ void Bibliotheque::ajouterLivre(Livre* nouveauLivre) {
 }
 
 void Bibliotheque::supprimerLivre(string codeLivre) {
-    for (int i = 0; i < nombreLivres; ++i) {
-        if ((*listeLivres[i]).getCode()== codeLivre) {
-            delete listeLivres[i]; // Supprime l'objet Livre
-            for (int j = i; j < nombreLivres - 1; ++j) {
-                listeLivres[j] = listeLivres[j + 1];
+    Noeud *current = tete;
+    Noeud *prev = nullptr;
+
+        // Parcourez la liste pour trouver le nœud à supprimer
+        while (current != nullptr && current->info->getCode() != codeLivre) {
+            prev = current;
+            current = current->suivant;
+        }
+
+        // Si le nœud est trouvé, supprimez-le
+        if (current != nullptr) {
+            if (prev != nullptr) {
+                prev->suivant = current->suivant;
+            } else {
+                tete = current->suivant;
             }
-            nombreLivres--;
-            cout << "Livre supprimé avec succès." <<endl;
-            return;
+            delete current;
+            cout << "Livre supprimé avec succès." << endl;
+        } else {
+            cout << "Livre non trouvé dans la bibliothèque." << endl;
         }
     }
-    cout << "Livre non trouvé dans la bibliothèque." << endl;
 }
 
 void Bibliotheque::afficherLivres() {
