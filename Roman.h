@@ -11,7 +11,7 @@ class Roman : public Livre {
 
     public:
         Roman(string,string,string,string);
-        Roman(Livre,string); // Constrcteur de recopie
+        Roman(Livre*,string); // Constrcteur de recopie
 
         //getter
 
