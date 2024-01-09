@@ -96,14 +96,15 @@ void afficherInfosAdherent(const Adherent& adherent) {
     cout << endl;
 } 
 
-bool Adherent::operator%(string ISBN)  {
+bool Adherent::operator%(string ISBN){
     for (int i = 0; i < nombreLivresEmpruntes ; ++i) {
         if (livresEmpruntes[i]->getISBN() == ISBN) {
             return true; 
+            break;
         }
     }
     return false; 
-
+}
 
 
 
