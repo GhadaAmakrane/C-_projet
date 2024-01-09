@@ -18,6 +18,13 @@ int main() {
     Livre1.setEditeur("Edwardo");
     Livre1.setPublicCible("adultes");
     Bibliotheque1.ajouterLivre(&Livre1);
+    Livre Livre2("la planètte de singes","#2","1232");
+    Livre2.setbibliotheque_origine(&Bibliotheque1);
+    Livre2.setAuteur("Pierre Boule");
+    Livre2.setEtat("non emprunté");
+    Livre2.setEditeur("Theo");
+    Livre2.setPublicCible("adultes");
+
     cout << "Hello, World!" << endl;
     cout << "\n------------------------------------\n" << endl;
     cout << "------------------------------------\n" << endl;
