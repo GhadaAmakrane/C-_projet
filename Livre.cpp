@@ -10,6 +10,7 @@ Livre :: Livre() {
     ISBN = "";
     publicCible = "";
     etat = "";
+    bibliotheque_origine = new Bibliotheque();
 }
 
 Livre :: Livre(string titre, string code, string ISBN) {
@@ -20,6 +21,8 @@ Livre :: Livre(string titre, string code, string ISBN) {
     editeur = "";
     publicCible = "";
     etat = "";
+    bibliotheque_origine = new Bibliotheque();
+
 }
 
 string Livre::getCode() {

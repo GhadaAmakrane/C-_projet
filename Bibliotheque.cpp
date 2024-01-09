@@ -57,7 +57,13 @@ void Bibliotheque::setCode(string nouveauCode) {
 
 // Setter pour les livres
 void Bibliotheque::setLivres(Livre** nouveauxLivres) {
-    listeLivres = nouveauxLivres;
+    int count = 0;
+    Livre** temp = nouveauxLivres;
+
+    while (*temp != nullptr) {
+        count++;
+        temp++;
+    }
 }
 
 void Bibliotheque::ajouterLivre(Livre* nouveauLivre) {
