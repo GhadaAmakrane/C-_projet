@@ -9,7 +9,7 @@ Bibliotheque::Bibliotheque() {
     code = "";
     capaciteMax = 100; // Valeur arbitraire pour la capacité maximale
     nombreLivres = 0;
-    listeLivres = new Livre*[capaciteMax]; // Allocation du tableau de pointeurs de Livre
+    tete=nullptr;
 }
 
 // Constructeur prenant les attributs spécifiques
