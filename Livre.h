@@ -19,7 +19,8 @@ class Livre {
 
     public:
     Livre();
-    Livre(string,string,string) ;//on le definit par le titre , le code et l'ISBN 
+    Livre(string,string,string) ;//on le definit par le titre , le code et l'ISBN
+    Livre(Livre*); //constructeur de recopie  
     
     //getters  
     string getCode() ;
