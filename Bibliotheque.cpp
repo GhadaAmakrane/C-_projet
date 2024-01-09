@@ -17,7 +17,7 @@ Bibliotheque::Bibliotheque(string nom, string adresse, string code)
     : nom(nom), adresse(adresse), code(code) {
     capaciteMax = 100; // Valeur arbitraire pour la capacité maximale
     nombreLivres = 0;
-    listeLivres = new Livre*[capaciteMax]; // Allocation du tableau de pointeurs de Livre
+    tete=nullptr;
 }
 
 // Getter pour le nom
