@@ -4,6 +4,7 @@
 #include <iostream>
 using namespace std;
 #include "Livre.h"
+#include "Noeud.h"
 class Livre;
 
 class Bibliotheque {

@@ -10,7 +10,7 @@ class Noeud {
         Livre* info;  // Pointeur vers un livre
         Noeud* suivant;  // Pointeur vers le prochain nœud dans la liste
     public:
-        Noeud(Livre* livre);
+        Noeud(Livre*);
 };
 
 #endif // __NOEUD_H__
