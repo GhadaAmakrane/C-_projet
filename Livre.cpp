@@ -52,7 +52,7 @@ string Livre::getEtat() {
 }
 
 
-Bibliotheque* getBibliothequeOrigine() {
+Bibliotheque* Livre::getbibliotheque_origine() {
     return bibliotheque_origine;
 } 
 

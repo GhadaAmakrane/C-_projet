@@ -4,6 +4,7 @@
 #include <iostream>
 using namespace std;
 #include "Bibliotheque.h"
+class Bibliotheque;
 
 class Livre {
     private:
