@@ -1,9 +1,4 @@
-/*
- * Livre.h
- *
- *  Created on: 20 janv. 2024
- *      Author: AFEK
- */
+
 
 #ifndef LIVRE_H_
 #define LIVRE_H_
