@@ -1,5 +1,5 @@
-#ifndef __RECEUIL_POESIE_H__
-#define __RECEUIL_POESIE_H__
+#ifndef __RECUEIL_POESIE_H__
+#define __RECUEIL_POESIE_H__
 
 #include <iostream>
 using namespace std;
@@ -25,4 +25,4 @@ class Receuil_Poesie : public Livre {
 };
 
 
-#endif // __RECEUIL_POESIE_H__
+#endif // __RECUEIL_POESIE_H__
