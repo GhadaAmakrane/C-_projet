@@ -120,7 +120,7 @@ void Bibliotheque::demanderLivreAutreBib(string isbn, Bibliotheque autreBiblioth
    }
 
 
-void Bibliotheque::RendreLivre(Livre* livreARendre) {
+void Bibliotheque::RendreLivre(Livre* livreARendre, string code) {
 }
 
 
