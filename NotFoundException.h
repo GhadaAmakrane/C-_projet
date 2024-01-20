@@ -1,9 +1,3 @@
-/*
- * NotFoundException.h
- *
- *  Created on: 20 janv. 2024
- *      Author: AFEK
- */
 
 #ifndef NOTFOUNDEXCEPTION_H_
 #define NOTFOUNDEXCEPTION_H_
