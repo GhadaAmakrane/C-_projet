@@ -10,7 +10,7 @@ Roman::Roman(string titre, string code, string ISBN, string genre)
 // Constructeur de recopie
 Roman::Roman(Livre* livre,string genre) {
     Livre(livre);
-    genre = genre;
+    this->genre = genre;
 }
 
 // Getter pour le genre
