@@ -75,8 +75,8 @@ void Adherent::setNumeroAdherent(int Numero){
 
 // Méthodes supplémentaires pour gérer les opérations de l'adhérent, comme emprunter et rendre des livres
 void Adherent::emprunterLivre(Livre* livre) {
-    if (nombreLivresEmpruntes < capaciteMaxLivresEmpruntes && livre.getEtat()==”libre”) {
-        livre->setEtat(“prete”);
+    if (nombreLivresEmpruntes < capaciteMaxLivresEmpruntes && livre->getEtat()=="libre") {
+        livre->setEtat("prete");
         livresEmpruntes[nombreLivresEmpruntes] = livre;
         nombreLivresEmpruntes++;
     } else {
@@ -86,8 +86,8 @@ void Adherent::emprunterLivre(Livre* livre) {
 
 void Adherent::rendreLivre(string ISBN) {
     for (int i = 0; i < nombreLivresEmpruntes; ++i) {
-        if (livresEmpruntes[i]->getISBN() == ISBN && livresEmpruntes[i]->getcode() == code) {
-            livresEmpruntes[i]->setEtat( "Libre");
+        if (livresEmpruntes[i]->getISBN() == ISBN && livresEmpruntes[i]->getCode() == "code") {
+            livresEmpruntes[i]->setEtat("libre");
             delete livresEmpruntes[i];
             livresEmpruntes[i] = new Livre();
             cout << "Le livre avec l'ISBN '" << ISBN << "' a été rendu par " << prenom << " " << nom << endl;
