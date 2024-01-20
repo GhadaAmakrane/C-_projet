@@ -1,9 +1,4 @@
-/*
- * Bibliotheque.cpp
- *
- *  Created on: 20 janv. 2024
- *      Author: AFEK
- */
+
 #include "Livre.h"
 #include "Noeud.h"
 #include "ListeLivres.h"
@@ -183,7 +178,6 @@ void Bibliotheque::setLivres(ListeLivres nouveauxLivres) {
 
 	}
 }
-
 
 
 
