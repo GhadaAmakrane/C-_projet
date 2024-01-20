@@ -1,9 +1,4 @@
-/*
- * Noeud.h
- *
- *  Created on: 20 janv. 2024
- *      Author: AFEK
- */
+
 
 #ifndef NOEUD_H_
 #define NOEUD_H_
