@@ -9,7 +9,7 @@ using namespace std;
 
 class Album : public Livre {
     private:
-        string illustrations ;
+        string illustration ;
     public:
         Album(string,string,string,string);
         Album(Livre*,string);
