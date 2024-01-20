@@ -10,15 +10,15 @@ Album::Album(string titre, string code, string ISBN, string illustration)
     : Livre(titre, code, ISBN), illustration(illustration) {}
 
 // Constructeur de recopie
-Album::Album(Livre livre, string illustration)
+Album::Album(Livre* livre, string illustration)
     : Livre(livre), illustration(illustration) {}
 
-// Getter 
+// Getter
 string Album::getIllustration() {
     return illustration;
 }
 
-// Setter 
+// Setter
 void Album::setIllustration(string nouveauIllustration) {
 	illustration = nouveauIllustration;
 }
