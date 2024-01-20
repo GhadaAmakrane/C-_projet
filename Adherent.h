@@ -27,6 +27,8 @@ public:
     //getters && setters
     string getNom();
     void setNom(string);
+    void setAge(int);
+    string getAge(int);
     string getPrenom();
     void setPrenom(string );
     string getAdresse();
