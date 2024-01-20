@@ -39,7 +39,7 @@ void Bibliotheque::ajouterLivre(Livre* nouveauLivre) {
 	        livres + nouveauLivre;
 	        nombreLivres++;
 	        // code du livre ? faudra vérifier s'il y a d'autres exemplaires
-	        cout << "Livre " << nouveauLivre->getTitre() << " ajoute avec succes a " << nom << "." << endl;
+	        cout << "Livre " << nouveauLivre->titre << " ajoute avec succes a " << nom << "." << endl;
 	    }
 	catch (const exception& e) {
 	        cout << "Erreur: " << e.what() << endl;
@@ -52,7 +52,7 @@ void Bibliotheque::supprimerLivre(string codeLivre) {
     try {
 
         // Parcourez la liste pour trouver le noeud a supprimer
-        while (courant != nullptr && courant->getInfo()->getCode() != codeLivre) {
+        while (courant != nullptr && courant->getInfo()->code != codeLivre) {
             precedent = courant;
             courant = courant->getSuivant();
         }
@@ -81,7 +81,7 @@ void Bibliotheque::afficherLivres() {
         Noeud* courant = livres.getTete();
         while (courant != nullptr) {
         	Livre* livre = courant->getInfo();
-            cout << "Code: " << livre->getCode() << ", Titre: " << livre->getTitre() << ", Etat: " << livre->getEtat() <<endl;
+            cout << "Code: " << livre->code << ", Titre: " << livre->titre<< ", Etat: " << livre->etat <<endl;
             courant = courant->getSuivant();
         }
     }
@@ -95,7 +95,7 @@ void Bibliotheque::acheterLivre(Livre* nouveauLivre) {
 		}
 		cout << "Livre achete avec succes." << endl;
 		this->ajouterLivre(nouveauLivre);
-		nouveauLivre->setBibliothequeOrigine(this);
+		nouveauLivre->bibliothequeOrigine=this;
 	}
 	catch (const exception& e) {
 		        cout << "Erreur: " << e.what() << endl;
@@ -105,16 +105,16 @@ void Bibliotheque::acheterLivre(Livre* nouveauLivre) {
 void Bibliotheque::demanderLivreAutreBib(string isbn, Bibliotheque autreBibliotheque) {
    Noeud* courant=autreBibliotheque.livres.getTete();
    try{
-	   while (courant->getInfo()->getISBN() != isbn and courant!=nullptr){
+	   while (courant->getInfo()->ISBN != isbn and courant!=nullptr){
 	  	   	   courant=courant->getSuivant();
 	     }
 	   if (courant==nullptr){
 		   throw NotFoundException();
 	   }
-	   if (courant->getInfo()->getEtat() == "libre") {
+	   if (courant->getInfo()->etat== "libre") {
 		   Livre* livreEmprunte = new Livre(courant->getInfo()); //copie indep
-		   livreEmprunte->setEtat("emprunte");//enprunte dans la bibiliotheque qui demande
-		   courant->getInfo()->setEtat("prete"); //prete dans la bibliotheque qui donne
+		   livreEmprunte->etat="emprunte";//enprunte dans la bibiliotheque qui demande
+		   courant->getInfo()->etat="prete"; //prete dans la bibliotheque qui donne
 		   cout << "Livre emprunte avec succes depuis l'autre bibliotheque." <<endl;
 		   this->ajouterLivre(livreEmprunte);
 	   }
