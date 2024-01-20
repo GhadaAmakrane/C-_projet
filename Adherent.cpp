@@ -45,7 +45,7 @@ string Adherent::getAge()  {
     return age;
 }
 
-void Adherent::setAge(string age) {
+void Adherent::setAge(int age) {
     this->age = age;
 }
 
