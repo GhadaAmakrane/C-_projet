@@ -1,9 +1,4 @@
-/*
- * Bibliotheque.h
- *
- *  Created on: 20 janv. 2024
- *      Author: AFEK
- */
+
 
 #ifndef BIBLIOTHEQUE_H_
 #define BIBLIOTHEQUE_H_
