@@ -1,9 +1,3 @@
-/*
- * ListeLivres.h
- *
- *  Created on: 20 janv. 2024
- *      Author: AFEK
- */
 
 #ifndef LISTELIVRES_H_
 #define LISTELIVRES_H_
