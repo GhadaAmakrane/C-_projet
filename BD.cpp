@@ -10,7 +10,7 @@ BD::BD(string titre, string code, string ISBN, string dessinateur)
     : Livre(titre, code, ISBN), dessinateur(dessinateur) {}
 
 // Constructeur de recopie
-BD::BD(Livre livre, string dessinateur)
+BD::BD(Livre* livre, string dessinateur)
     : Livre(livre), dessinateur(dessinateur) {}
 
 // Getter pour le genre
