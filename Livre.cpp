@@ -1,9 +1,4 @@
-/*
- * Livre.cpp
- *
- *  Created on: 20 janv. 2024
- *      Author: AFEK
- */
+
 #include "Livre.h"
 #include <iostream>
 using namespace std;
@@ -124,7 +119,6 @@ void Livre::setEtat(string nouvelEtat) {
 void Livre::setBibliothequeOrigine(Bibliotheque* nouvelleBibliotheque) {
     bibliothequeOrigine = nouvelleBibliotheque;
 }
-
 
 
 
