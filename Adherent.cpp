@@ -30,7 +30,6 @@ Adherent::Adherent(string nom, string prenom, string adresse, int age) {
 // Destructeur
 Adherent::~Adherent() {
     delete[] livresEmpruntes; 
-    
 }
 
 // Getters et setters
@@ -86,8 +85,10 @@ void Adherent::emprunterLivre(Livre* livre) {
 
 void Adherent::rendreLivre(string ISBN) {
     for (int i = 0; i < nombreLivresEmpruntes; ++i) {
-        if (livresEmpruntes[i]->getISBN() == ISBN) {
+        if (livresEmpruntes[i]->getISBN() == ISBN && livresEmpruntes[i]->getcode() == code) {
             livresEmpruntes[i]->setEtat( "Libre");
+            delete livresEmpruntes[i];
+            livresEmpruntes[i] = new Livre();
             cout << "Le livre avec l'ISBN '" << ISBN << "' a été rendu par " << prenom << " " << nom << endl;
             nombreLivresEmpruntes--;
             break ;
