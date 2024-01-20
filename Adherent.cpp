@@ -10,7 +10,7 @@ Adherent::Adherent() {
     adresse = "";
     age = 0;
     numeroAdherent = 0;
-    capaciteMaxLivresEmpruntes = 10; 
+    capaciteMaxLivresEmpruntes = 10;
     livresEmpruntes = new Livre*[capaciteMaxLivresEmpruntes];
     nombreLivresEmpruntes = 0;
 }
@@ -21,15 +21,15 @@ Adherent::Adherent(string nom, string prenom, string adresse, int age) {
     this->prenom = prenom;
     this->adresse = adresse;
     this->age=age;
-    numeroAdherent = 0; 
-    capaciteMaxLivresEmpruntes = 10; 
+    numeroAdherent = 0;
+    capaciteMaxLivresEmpruntes = 10;
     livresEmpruntes = new Livre*[capaciteMaxLivresEmpruntes];
     nombreLivresEmpruntes = 0;
 }
 
 // Destructeur
 Adherent::~Adherent() {
-    delete[] livresEmpruntes; 
+    delete[] livresEmpruntes;
 }
 
 // Getters et setters
@@ -106,18 +106,17 @@ void afficherInfosAdherent(const Adherent& adherent) {
     cout << "Numéro d'adhérent: " << adherent.numeroAdherent << endl;
     cout << "Livres empruntés: ";
     cout << endl;
-} 
+}
 
 bool Adherent::operator%(string ISBN){
     for (int i = 0; i < nombreLivresEmpruntes ; ++i) {
         if (livresEmpruntes[i]->getISBN() == ISBN) {
-            return true; 
+            return true;
             break;
         }
     }
-    return false; 
+    return false;
 }
-
 
 
 
