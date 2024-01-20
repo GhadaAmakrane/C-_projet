@@ -1,9 +1,4 @@
-/*
- * ListeLivres.cpp
- *
- *  Created on: 20 janv. 2024
- *      Author: AFEK
- */
+
 #include <iostream>
 using namespace std;
 #include "Noeud.h"
@@ -22,7 +17,6 @@ ListeLivres& ListeLivres::operator+(Livre* livre){
 	taille+=1;
 	return *this;
 }
-
 
 
 
