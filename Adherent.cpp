@@ -41,7 +41,7 @@ void Adherent::setNom(string nom) {
     this->nom = nom;
 }
 
-string Adherent::getAge()  {
+int Adherent::getAge()  {
     return age;
 }
 
