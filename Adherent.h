@@ -1,5 +1,5 @@
-#ifndef __ADHERANT_H__
-#define __ADHERANT_H__
+#ifndef __ADHERENT_H__
+#define __ADHERENT_H__
 
 #include <iostream>
 using namespace std;
@@ -28,7 +28,7 @@ public:
     string getNom();
     void setNom(string);
     void setAge(int);
-    string getAge(int);
+    int getAge();
     string getPrenom();
     void setPrenom(string );
     string getAdresse();
@@ -53,4 +53,4 @@ public:
 
 };
 
-#endif // __ADHERANT_H__
+#endif // __ADHERENT_H__
