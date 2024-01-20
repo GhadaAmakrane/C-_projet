@@ -13,6 +13,9 @@ class Album : public Livre {
     public:
         Album(string,string,string,string);
         Album(Livre*,string);
+
+        string getIllustration(); //getter
+        void setIllustration(string); //setter
 };
 
 #endif // __ALBUM_H__
