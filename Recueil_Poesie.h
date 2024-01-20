@@ -5,23 +5,23 @@
 using namespace std;
 #include "Livre.h"
 
-class Receuil_Poesie : public Livre {
+class Recueil_Poesie : public Livre {
     private:
         string inducateurVersProse;
 
     public:
 
-        Receuil_Poesie(string,string,string,string);
-        Receuil_Poesie(Livre*,string); // Constrcteur de recopie
+        Recueil_Poesie(string,string,string,string);
+        Recueil_Poesie(Livre*,string); // Constrcteur de recopie
 
         //getter
 
-        string getinducateurVersProse();
+        string getInducateurVersProse();
 
         //setter
 
-        void setinducateurVersProse(string);
-    
+        void setInducateurVersProse(string);
+
 };
 
 
