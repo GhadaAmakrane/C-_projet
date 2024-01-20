@@ -18,12 +18,12 @@ private:
     int nombreLivresEmpruntes; // Nombre de livres empruntés
     int capaciteMaxLivresEmpruntes;
 
-public: 
+public:
 
     Adherent();
-    Adherent(string,string,string);
+    Adherent(string,string,string, int);
     ~Adherent();
-        
+
     //getters && setters
     string getNom();
     void setNom(string);
@@ -40,7 +40,7 @@ public:
     int getCapaciteMaxLivresEmpruntes();
     void setCapaciteMaxLivresEmpruntes(int capaciteMaxLivresEmpruntes);
 
-    //Methodes 
+    //Methodes
     void emprunterLivre(Livre*);
     void rendreLivre(string);
 
@@ -49,7 +49,7 @@ public:
 
     //Operateur
     bool operator%(string);
-    
+
 
 };
 
