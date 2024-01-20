@@ -75,7 +75,8 @@ void Adherent::setNumeroAdherent(int Numero){
 
 // Méthodes supplémentaires pour gérer les opérations de l'adhérent, comme emprunter et rendre des livres
 void Adherent::emprunterLivre(Livre* livre) {
-    if (nombreLivresEmpruntes < capaciteMaxLivresEmpruntes) {
+    if (nombreLivresEmpruntes < capaciteMaxLivresEmpruntes && livre.getEtat()==”libre”) {
+        livre->setEtat(“prete”);
         livresEmpruntes[nombreLivresEmpruntes] = livre;
         nombreLivresEmpruntes++;
     } else {
