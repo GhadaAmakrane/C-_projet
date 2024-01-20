@@ -4,21 +4,21 @@ using namespace std;
 
 
 // Constructeur prenant les attributs spécifiques et appelant le constructeur de Livre
-Receuil_Poesie::Receuil_Poesie(string titre, string code, string ISBN, string inducateurVersProse)
+Recueil_Poesie::Recueil_Poesie(string titre, string code, string ISBN, string inducateurVersProse)
     : Livre(titre, code, ISBN), inducateurVersProse(inducateurVersProse) {}
 
 // Constructeur de recopie
-Receuil_Poesie::Receuil_Poesie(Livre* livre,string inducateurVersProse) {
+Recueil_Poesie::Recueil_Poesie(Livre* livre,string inducateurVersProse) {
     Livre(livre);
-    inducateurVersProse = inducateurVersProse;
+    this->inducateurVersProse = inducateurVersProse;
 }
 
 // Getter pour le genre
-string Receuil_Poesie::getInducateurVersProse() {
+string Recueil_Poesie::getInducateurVersProse() {
     return inducateurVersProse;
 }
 
 // Setter pour le genre
-void Receuil_Poesie::setInducateurVersProse(string nouveauInducateurVersProse) {
+void Recueil_Poesie::setInducateurVersProse(string nouveauInducateurVersProse) {
     inducateurVersProse = nouveauInducateurVersProse;
 }
