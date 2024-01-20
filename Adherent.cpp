@@ -8,6 +8,7 @@ Adherent::Adherent() {
     nom = "";
     prenom = "";
     adresse = "";
+    age = 0;
     numeroAdherent = 0;
     capaciteMaxLivresEmpruntes = 10; 
     livresEmpruntes = new Livre*[capaciteMaxLivresEmpruntes];
