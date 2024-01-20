@@ -16,10 +16,11 @@ Adherent::Adherent() {
 }
 
 // Constructeur prenant les attributs spécifiques
-Adherent::Adherent(string nom, string prenom, string adresse) {
+Adherent::Adherent(string nom, string prenom, string adresse, int age) {
     this->nom = nom;
     this->prenom = prenom;
     this->adresse = adresse;
+    this->age=age;
     numeroAdherent = 0; 
     capaciteMaxLivresEmpruntes = 10; 
     livresEmpruntes = new Livre*[capaciteMaxLivresEmpruntes];
@@ -39,6 +40,14 @@ string Adherent::getNom(){
 
 void Adherent::setNom(string nom) {
     this->nom = nom;
+}
+
+string Adherent::getAge()  {
+    return age;
+}
+
+void Adherent::setAge(string age) {
+    this->age = age;
 }
 
 string Adherent::getPrenom() {
