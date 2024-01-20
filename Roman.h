@@ -20,7 +20,8 @@ class Roman : public Livre {
         //setter
 
         void setGenre(string);
-    
+
 
 };
 #endif // __ROMAN_H__
+
