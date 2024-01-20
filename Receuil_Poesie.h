@@ -12,7 +12,7 @@ class Receuil_Poesie : public Livre {
     public:
 
         Receuil_Poesie(string,string,string,string);
-        Receuil_Poesie(Livre,string); // Constrcteur de recopie
+        Receuil_Poesie(Livre*,string); // Constrcteur de recopie
 
         //getter
 
