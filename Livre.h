@@ -1,6 +1,12 @@
-#ifndef __LIVRE_H__
-#define __LIVRE_H__
+/*
+ * Livre.h
+ *
+ *  Created on: 20 janv. 2024
+ *      Author: AFEK
+ */
 
+#ifndef LIVRE_H_
+#define LIVRE_H_
 #include <iostream>
 using namespace std;
 #include "Bibliotheque.h"
@@ -15,14 +21,14 @@ class Livre {
         string ISBN;
         string publicCible;
         string etat;
-        Bibliotheque* bibliotheque_origine;
+        Bibliotheque* bibliothequeOrigine;
 
     public:
     Livre();
     Livre(string,string,string) ;//on le definit par le titre , le code et l'ISBN
-    Livre(Livre*); //constructeur de recopie  
-    
-    //getters  
+    Livre(Livre*); //constructeur de recopie
+
+    //getters
     string getCode() ;
     string getAuteur() ;
     string getTitre() ;
@@ -30,7 +36,7 @@ class Livre {
     string getISBN() ;
     string getPublicCible() ;
     string getEtat() ;
-    Bibliotheque* getbibliotheque_origine();
+    Bibliotheque* getBibliothequeOrigine();
 
 
 
@@ -41,9 +47,13 @@ class Livre {
     void setISBN(string);
     void setPublicCible(string);
     void setEtat(string);
-    void setbibliotheque_origine(Bibliotheque*);
+    void setBibliothequeOrigine(Bibliotheque*);
 
 
 
 };
-#endif // __LIVRE_H__
+
+
+
+
+#endif /* LIVRE_H_ */

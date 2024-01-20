@@ -1,12 +1,21 @@
-#ifndef __BIBLIOTHEQUE_H__
-#define __BIBLIOTHEQUE_H__
+/*
+ * Bibliotheque.h
+ *
+ *  Created on: 20 janv. 2024
+ *      Author: AFEK
+ */
 
+#ifndef BIBLIOTHEQUE_H_
+#define BIBLIOTHEQUE_H_
 #include <iostream>
 using namespace std;
 #include "Livre.h"
 #include "Noeud.h"
 #include "ListeLivres.h"
+#include <stdexcept>
 class Livre;
+class Noeud;
+class ListeLivres;
 
 class Bibliotheque {
     private :
@@ -15,17 +24,27 @@ class Bibliotheque {
         string code;
         int capaciteMax;  // Nombre maximale de livres dans la bibliothèque
         int nombreLivres; // Nombre de livre dans la bibliothèque
-        ListeLivres Livres;  // liste chainée des livres
+        ListeLivres livres;  // liste chainée des livres
 
     public:
         Bibliotheque(); //Constructeur par defaut
-        Bibliotheque(string,string,string) ;// Constructeur 
+        Bibliotheque(string,string,string) ;// Constructeur
+
+        //Methodes
+		   void afficherLivres();
+		   void ajouterLivre(Livre*);
+		   ListeLivres chercheLivreParCatg(string);
+		   void demanderLivreAutreBib(string , Bibliotheque);
+		   void acheterLivre(Livre*);
+		   void supprimerLivre(string);
+		   void RendreLivre(Livre*);
 
         //getters
         string getNom();
         string getAdresse();
         string getCode();
         ListeLivres getLivres();
+        int getNombreLivres();
 
         //setters
         void setNom(string);
@@ -33,15 +52,9 @@ class Bibliotheque {
         void setCode(string);
         void setLivres(ListeLivres);
 
-        //Methodes
-        void afficherLivres() ;
-        void ajouterLivre(Livre*);
-        ListeLivres chercheLivreParCatg(string);
-        void demanderLivreAutreBib(string , Bibliotheque&);
-        void acheterLivre(Livre&);
-        void supprimerLivre(string);
-        void RendreLivre(Livre&);
-
 };
 
-#endif // __BIBLIOTHEQUE_H__
+
+
+
+#endif /* BIBLIOTHEQUE_H_ */

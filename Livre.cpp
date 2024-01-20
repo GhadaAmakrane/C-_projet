@@ -1,3 +1,9 @@
+/*
+ * Livre.cpp
+ *
+ *  Created on: 20 janv. 2024
+ *      Author: AFEK
+ */
 #include "Livre.h"
 #include <iostream>
 using namespace std;
@@ -10,18 +16,18 @@ Livre :: Livre() {
     ISBN = "";
     publicCible = "";
     etat = "";
-    bibliotheque_origine = new Bibliotheque();
+    bibliothequeOrigine = new Bibliotheque();
 }
 
 Livre :: Livre(string titre, string code, string ISBN) {
-    titre = titre;
-    code = code;
-    ISBN = ISBN;
+    this->titre = titre;
+    this->code = code;
+    this->ISBN = ISBN;
     auteur = "";
     editeur = "";
     publicCible = "";
     etat = "";
-    bibliotheque_origine = new Bibliotheque();
+    bibliothequeOrigine = new Bibliotheque();
 
 }
 
@@ -36,10 +42,10 @@ Livre:: Livre(Livre* livre) {
             etat = livre->etat;
 
             // Copie profonde du pointeur Bibliotheque
-            if (livre->bibliotheque_origine != nullptr) {
-                bibliotheque_origine = new Bibliotheque(*livre->bibliotheque_origine);
+            if (livre->bibliothequeOrigine != nullptr) {
+                bibliothequeOrigine = new Bibliotheque(*livre->bibliothequeOrigine);
             } else {
-                bibliotheque_origine = nullptr;
+                bibliothequeOrigine = nullptr;
             }
         } else {
             // Si le pointeur est nul, initialiser les attributs à des valeurs par défaut
@@ -50,7 +56,7 @@ Livre:: Livre(Livre* livre) {
             ISBN = "";
             publicCible = "";
             etat = "";
-            bibliotheque_origine = nullptr;
+            bibliothequeOrigine = nullptr;
         }
     }
 
@@ -85,9 +91,9 @@ string Livre::getEtat() {
 }
 
 
-Bibliotheque* Livre::getbibliotheque_origine() {
-    return bibliotheque_origine;
-} 
+Bibliotheque* Livre::getBibliothequeOrigine() {
+    return bibliothequeOrigine;
+}
 
 
 // Méthodes setters
@@ -115,6 +121,11 @@ void Livre::setEtat(string nouvelEtat) {
     etat = nouvelEtat;
 }
 
-void Livre::setbibliotheque_origine(Bibliotheque* nouvelle_bibliotheque) {
-    bibliotheque_origine = nouvelle_bibliotheque;
+void Livre::setBibliothequeOrigine(Bibliotheque* nouvelleBibliotheque) {
+    bibliothequeOrigine = nouvelleBibliotheque;
 }
+
+
+
+
+
