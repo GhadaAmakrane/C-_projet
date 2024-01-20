@@ -11,6 +11,7 @@ private:
     string nom;
     string prenom;
     string adresse;
+    int age;
     int numeroAdherent;
     Bibliotheque bibliothequeInscrite;
     Livre **livresEmpruntes;   // Tableau de pointeurs de Livre
