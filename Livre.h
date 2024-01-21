@@ -28,7 +28,7 @@ class Livre {
     friend void Bibliotheque::supprimerLivre(string);
     friend void Bibliotheque::afficherLivres();
     friend void Bibliotheque::acheterLivre(Livre*);
-    friend void Bibliotheque::RendreLivre(Livre*);
+    friend void Bibliotheque::RendreLivre(Livre*, string);
 
 
     //getters
