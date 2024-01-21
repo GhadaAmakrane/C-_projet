@@ -32,7 +32,7 @@ class Bibliotheque {
 		   void demanderLivreAutreBib(string , Bibliotheque);
 		   void acheterLivre(Livre*);
 		   void supprimerLivre(string);
-		   void RendreLivre(Livre*);
+		   void RendreLivre(Livre*, string);
 
         //getters
         string getNom();
