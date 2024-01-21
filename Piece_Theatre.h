@@ -13,7 +13,7 @@ class Piece_Theatre : public Livre {
 
     public:
         Piece_Theatre(string,string,string,string);
-        Piece_Theatre(Livre,string); // Constrcteur de recopie
+        Piece_Theatre(Livre*,string); // Constrcteur de recopie
 
         //getter
 
@@ -22,7 +22,7 @@ class Piece_Theatre : public Livre {
         //setter
 
         void setSiecle(string);
-    
+
 
 };
 
