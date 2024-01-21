@@ -7,18 +7,16 @@ using namespace std;
 Recueil_Poesie::Recueil_Poesie(string titre, string code, string ISBN, string inducateurVersProse)
     : Livre(titre, code, ISBN), inducateurVersProse(inducateurVersProse) {}
 
-// Constructeur de recopie
-Recueil_Poesie::Recueil_Poesie(Livre* livre,string inducateurVersProse) {
-    Livre(livre);
-    this->inducateurVersProse = inducateurVersProse;
-}
 
-// Getter pour le genre
+Recueil_Poesie::Recueil_Poesie(Livre* livre, string inducateurVersProse)
+    : Livre(livre), inducateurVersProse(inducateurVersProse) {}
+
+// Getter pour
 string Recueil_Poesie::getInducateurVersProse() {
     return inducateurVersProse;
 }
 
-// Setter pour le genre
+// Setter pour
 void Recueil_Poesie::setInducateurVersProse(string nouveauInducateurVersProse) {
     inducateurVersProse = nouveauInducateurVersProse;
 }
