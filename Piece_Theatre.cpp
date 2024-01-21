@@ -8,7 +8,7 @@ Piece_Theatre::Piece_Theatre(string titre, string code,string ISBN, string siecl
     : Livre(titre, code, ISBN), siecle(siecle) {}
 
 
-Piece_Theatre::Piece_Theatre(Livre livre, string siecle)
+Piece_Theatre::Piece_Theatre(Livre* livre, string siecle)
     : Livre(livre), siecle(siecle) {}
 
 
