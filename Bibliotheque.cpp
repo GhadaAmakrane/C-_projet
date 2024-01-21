@@ -5,7 +5,6 @@
 #include "Bibliotheque.h"
 #include <iostream>
 #include <stdexcept>
-#include "NotFoundException.h"
 using namespace std;
 
 Bibliotheque::Bibliotheque() {
@@ -52,7 +51,7 @@ void Bibliotheque::supprimerLivre(string codeLivre) {
             courant = courant->getSuivant();
         }
         if (courant==nullptr){
-        	throw NotFoundException();
+        	cout << "Erreur: Livre non trouve dans la bibliotheque." << endl;
         }
 
        if (precedent != nullptr) { // le noeud est au milieux ou a la fin de la liste
@@ -104,7 +103,7 @@ void Bibliotheque::demanderLivreAutreBib(string isbn, Bibliotheque autreBiblioth
 	  	   	   courant=courant->getSuivant();
 	     }
 	   if (courant==nullptr){
-		   throw NotFoundException();
+		   cout << "Erreur: Livre non trouve dans la bibliotheque." << endl;
 	   }
 	   if (courant->getInfo()->etat== "libre") {
 		   Livre* livreEmprunte = new Livre(courant->getInfo()); //copie indep
