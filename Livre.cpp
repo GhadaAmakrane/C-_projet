@@ -115,6 +115,9 @@ void Livre::setPublicCible(string nouveauPublicCible) {
 void Livre::setEtat(string nouvelEtat) {
     etat = nouvelEtat;
 }
+void Livre::setCode(string nouvelcode) {
+    code = nouvelcode;
+}
 
 void Livre::setBibliothequeOrigine(Bibliotheque* nouvelleBibliotheque) {
     bibliothequeOrigine = nouvelleBibliotheque;
