@@ -7,7 +7,7 @@ using namespace std;
 
 class Recueil_Poesie : public Livre {
     private:
-        string inducateurVersProse;
+        string indicateurVersProse;
 
     public:
 
@@ -16,11 +16,11 @@ class Recueil_Poesie : public Livre {
 
         //getter
 
-        string getInducateurVersProse();
+        string getIndicateurVersProse();
 
         //setter
 
-        void setInducateurVersProse(string);
+        void setIndicateurVersProse(string);
 
 };
 
