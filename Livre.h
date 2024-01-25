@@ -51,6 +51,7 @@ class Livre {
     void setPublicCible(string);
     void setEtat(string);
     void setBibliothequeOrigine(Bibliotheque*);
+    void setCode(string);
 
 
 
